@@ -1,11 +1,13 @@
 def stock_picker(array)
+
 	profit = 0
 	buy_index = 0
 	sell_index = 1
 	best_sell_day = 0
 	best_buy_day = 0
 	
-	while buy_index != array.length - 1 
+	puts array.length
+	while buy_index != array.length - 1  
 		if array[sell_index] - array[buy_index] > profit
 			profit = array[sell_index] - array[buy_index]
 			best_buy_day = buy_index
@@ -18,6 +20,7 @@ def stock_picker(array)
 				sell_index = buy_index + 1
 			end
 		end
+		
 	end
 	
 	if profit <= 0
@@ -31,6 +34,6 @@ def stock_picker(array)
 end
         
 
-stock_picker([10,11,12,13,14,15])
+stock_picker([10,11,12,13,14])
 
 
