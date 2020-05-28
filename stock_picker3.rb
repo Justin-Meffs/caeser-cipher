@@ -20,5 +20,13 @@ def stock_picker(array)
     end
     puts best_buy_day
     puts best_sell_day
+    if profit == 0
+        puts "There is no good day to buy"
+    else
+        best_days = []
+        best_days << best_buy_day 
+        best_days << best_sell_day
+        print best_days
+    end
 end
 stock_picker([1,2,3,4,5])
